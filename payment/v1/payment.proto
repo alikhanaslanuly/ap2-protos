@@ -8,6 +8,7 @@ option go_package = "github.com/alikhanaslanuly/ap2-gen/payment/v1;paymentv1";
 
 service PaymentService {
   rpc ProcessPayment(PaymentRequest) returns (PaymentResponse);
+  rpc ListPayments(ListPaymentRequest) returns (ListPaymentResponse);
 }
 
 message PaymentRequest {
