@@ -26,7 +26,8 @@ message PaymentResponse {
   string payment_id = 1;
   string status = 2;
   string message = 3;
-  google.protobuf.Timestamp paid_at = 4;
+  double amount = 4;
+  google.protobuf.Timestamp paid_at = 5;
 }
 
 message ListPaymentResponse {
