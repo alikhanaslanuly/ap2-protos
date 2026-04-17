@@ -16,9 +16,18 @@ message PaymentRequest {
   double amount   = 3;
 }
 
+message ListPaymentRequest {
+  int64 min_amount = 1;
+  int64 max_amount = 2;
+}
+
 message PaymentResponse {
-  string                    payment_id = 1;
-  string                    status     = 2;
-  string                    message    = 3;
-  google.protobuf.Timestamp paid_at    = 4;
+  string payment_id = 1;
+  string status = 2;
+  string message = 3;
+  google.protobuf.Timestamp paid_at = 4;
+}
+
+message ListPaymentResponse {
+  repeated PaymentResponse payments = 1;
 }
